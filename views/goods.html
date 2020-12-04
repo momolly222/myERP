@@ -1,0 +1,38 @@
+<div class="right_content clearfix">
+    <div class="erp_contain_header" style="height: 61px; background-color: #f7f7f7; border-bottom: 1px solid #ddd;">
+        <p style="font-size: 18px;">品目信息</p>
+    </div>
+    <div class="erp_contain" style="margin-left: 50px;">
+        <table class="table table-bordered" border="1" style="height: 800px; width: 1000px;">
+            <tr style="height: 20px;">
+                <th>序列</th>
+                <th>品目编号</th>
+                <th>品目名</th>
+                <th>规格</th>
+                <th>包装</th>
+                <th>分类</th>
+                <th>图片</th>
+            </tr>
+
+
+            {{range .goodsSKUs}}
+            <tr>
+                <th><input type=" checkbox" name="id" value="{{.Id}}" />
+                </th>
+                <th>{{.Code}}</th>
+                <th>{{.Name}}</th>
+                <th>{{.Spec}}</th>
+                <th>{{.CTN}}</th>
+                <th>{{.GoodsKind.Name}}</th>
+                <th><img src="{{.Img.Path}}"></th>
+            </tr>
+            {{end}}
+
+        </table>
+
+        <div class="btn-group" role="group" aria-label="...">
+            <button type="button" class="btn btn-default"><a target="_blank" href="/addGoods">新增</a></button>
+            <button type="button" class="btn btn-default">删除</button>
+        </div>
+    </div>
+</div>

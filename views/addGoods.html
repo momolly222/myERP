@@ -1,0 +1,31 @@
+<div class="right_content clearfix">
+    <div class="erp_contain_header" style="height: 61px; background-color: #f7f7f7; border-bottom: 1px solid #ddd;">
+        <p style="font-size: 18px;">品目信息 -> 增加品目</p>
+    </div>
+    <div class="erp_contain" style="margin-left: 50px;">
+        <form method="post" action="/addGoods" enctype="multipart/form-data">
+            <div class="form-group">
+                品目编码 <input type="text" name="productCode" />
+            </div>
+            <div class="form-group">
+                品目名称 <input type="text" name="productName" />
+            </div>
+            <div class="form-group">
+                规格 <input type="text" name="spec" />
+            </div>
+            <div class="form-group">
+                包装 <input type="text" name="package" />
+            </div>
+            <div class="form-group">
+                分类 <input type="text" name="kind" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputFile">上传图片</label>
+                <input type="file" id="exampleInputFile" name="img">
+            </div>
+
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+</div>
